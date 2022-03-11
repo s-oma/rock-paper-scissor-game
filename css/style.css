@@ -1,0 +1,279 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.main-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(10, 10, 55);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Start Game Page */
+.start-game-page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(5, 170, 250, 0.75);
+}
+.start-game-page h1 {
+    position: absolute;
+    left: 50%;
+    top: 27%;
+    transform: translate(-50%, -50%);
+    color: darkred;
+    font-size: 35px;
+    font-weight: bolder;
+}
+.start-game-page span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    color: #fff;
+    padding: 20px 30px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/* End Game Page */
+/* Start The Header */
+.main-container .title {
+    width: 800px;
+    height: 100px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    text-align: center;
+}
+.main-container .title p {
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    padding-top: 15px;
+}
+/* End The Header */
+/* Start The Scores Container */
+.main-container .scores-container {
+    width: 500px;
+    height: 120px;
+    /*border: 2px solid #fff;
+    border-radius: 25px;*/
+    margin: 50px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    gap: 10px;
+}
+.main-container .scores-container .your-scores,
+.main-container .scores-container .computer-scores {
+    width: 150px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    background-color: #fff;
+    color: rgb(10, 10, 55);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.main-container .scores-container .your-scores h1,
+.main-container .scores-container .computer-scores h1 {
+    font-weight: bolder;
+    font-size: 50px;
+    color: darkorange;
+}
+.main-container .scores-container .your-scores p,
+.main-container .scores-container .computer-scores p {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    letter-spacing: 1.5px;
+}
+/* End The Scores Container */
+/* Start The Hands container */
+.main-container .hands {
+    width: 450px;
+    height: 120px;
+    border: 3px solid #fff;
+    border-radius: 25px;
+    margin: 30px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    gap: 10px;
+}
+.main-container .hands img {
+    width: 80%;
+    border-radius: 50%;
+}
+.main-container .hands .rock img {
+    border: 15px solid darkorange;
+}
+.main-container .hands .paper img {
+    border: 15px solid darkmagenta;
+}
+.main-container .hands .scissor img {
+    border: 15px solid darkcyan;
+}
+.main-container .hands .hand {
+    cursor: pointer;
+    transition: 0.3s;
+}
+.main-container .hands .hand:hover {
+    transform: translateY(-15px);
+}
+/* End The Hands container */
+/* Start The Game Result Section */
+.main-container .game-result {
+    width: 950px;
+    display: none;
+    padding-bottom: 10px;
+}
+.main-container .game-result .user-selection .choosen-image img,
+.main-container .game-result .computer-selection .choosen-image img {
+    width: 50%;
+    border-radius: 50%;
+}
+/*
+.main-container .game-result .user-selection .choosen-image img {
+    border: 20px solid darkmagenta;
+}
+.main-container .game-result .computer-selection .choosen-image img {
+    border: 20px solid darkorange;
+*/
+.main-container .game-result .user-selection,
+.main-container .game-result .result,
+.main-container .game-result .computer-selection {
+    flex: 1;
+}
+.main-container .game-result .user-selection h1,
+.main-container .game-result .computer-selection h1 {
+    font-weight: bold;
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 25px; 
+}
+.main-container .game-result .result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.main-container .game-result .result h1 {
+    font-weight: bold;
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 35px; 
+}
+.main-container .game-result .result .play-again {
+    background-color: #fff;
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 15px;
+    color: darkred;
+    font-weight: bolder;
+    transition: 0.3s;
+}
+.main-container .game-result .result .play-again:hover {
+    background-color: darkcyan;
+    transform: translateY(-5px);
+}
+.main-container .game-result .user-selection .choosen-image,
+.main-container .game-result .computer-selection .choosen-image {
+    display: flex;
+    justify-content: center;
+}
+/* End The Game Result Section */
+/* Start "You Are The Winer" Page */
+.display-winner {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-image: url(../imgs/like.png);
+    background-color: rgba(5, 170, 250, 0.85);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 400px;
+}
+.display-winner h1 {
+    position: absolute;
+    left: 50%;
+    top: 8%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 50px;
+    font-weight: bolder;
+}
+.display-winner span {
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -50%);
+    background-color: darkorange;
+    color: black;
+    padding: 15px 25px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+/* End "You Are The Winer" Page */
+/* Start "You LOST !" Page */
+.display-lost {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-image: url(../imgs/dislike.png);
+    background-color: rgba(5, 170, 250, 0.85);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 400px;
+}
+.display-lost h1 {
+    position: absolute;
+    left: 50%;
+    top: 8%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 50px;
+    font-weight: bolder;
+}
+.display-lost span {
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -50%);
+    background-color: darkorange;
+    color: black;
+    padding: 15px 25px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+/* End "You LOST !" Page */

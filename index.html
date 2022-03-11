@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor Game</title>
+        <!-- CSS file -->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Google Fonts - Roboto - Open Sans -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Start Game Page -->
+        <div class="start-game-page">
+            <h1>First To Score 5 Points Wins The Game</h1>
+            <span>Start Game</span>
+        </div>
+        <!-- End Game Page -->
+        <!-- Start The Header -->
+        <div class="title">
+            <p>Rock Paper Scissor Game</p>
+        </div>
+        <!-- End The Header -->
+        <!-- Start The Scores Container -->
+        <div class="scores-container">
+            <div class="your-scores">
+                <p>YOUR SCORES</p>
+                <h1>0</h1>
+            </div>
+            <div class="computer-scores">
+                <p>COMPUTER SCORES</p>
+                <h1>0</h1>
+            </div>
+        </div>
+        <!-- End The Scores Container -->
+        <!-- Start The Hands container -->
+        <div class="hands">
+            <div class="hand paper">
+                <img src="imgs/paper.png" alt="paper" onclick="userSelection('paper')">
+            </div>
+            <div class="hand scissor">
+                <img src="imgs/scissor.png" alt="scissor" onclick="userSelection('scissor')">
+            </div>
+            <div class="hand rock">
+                <img src="imgs/rock.png" alt="rock" onclick="userSelection('rock')">
+            </div>
+        </div>
+        <!-- End The Hands container -->
+        <!-- Start the Game Result Section -->
+        <div class="game-result">
+            <div class="user-selection">
+                <h1>YOU CHOOSE</h1>
+                <div class="choosen-image">
+                    <img id="user-image-choice" src="imgs/paper.png" alt="paper">
+                </div>
+            </div>
+            <div class="result">
+                <div class="statement"><h1>YOU WIN</h1></div>
+                <div class="play-again" onclick="startAgain()">PLAY AGAIN</div>
+            </div>
+            <div class="computer-selection">
+                <h1>COMPUTER CHOOSE</h1>
+                <div class="choosen-image">
+                    <img id="com-image-choice" src="imgs/rock.png" alt="rock">
+                </div>
+            </div>
+        </div>
+        <!-- End the Game Result Section -->
+        <!-- Start "You Are The Winer" Page -->
+        <div class="display-winner">
+            <h1>You Are The WINNER !</h1>
+            <span>Play Again</span>
+        </div>
+        <!-- End "You Are The Winer" Page -->
+        <!-- Start "You LOST !" Page -->
+        <div class="display-lost">
+            <h1>You LOST !</h1>
+            <span>Try Again</span>
+        </div>
+        <!-- End "You LOST !" Page -->       
+    </div>
+<script src="js/main.js"></script>
+</body>
+</html>
